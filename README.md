@@ -1,4 +1,4 @@
-# KalkulatorPlace
+# Kalkulator Plaće
 Windows Form aplikacija za obračun plaće pisana u C# programskom jeziku i spojena na lokalnu bazu podataka.
 
 
