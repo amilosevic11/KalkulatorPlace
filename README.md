@@ -16,4 +16,6 @@ Pritiskom na "Novi radnik" nam se otvara sljedeći prozor:
 
 Računanje obračuna plaće se radi tako da unesemo BRUTO iznos plaće, odaberemo radnika u "DataGridView" i pritisnemo "Izračunaj".
 
+![PregledIspisa](https://i.ibb.co/T1VV2kP/Pregled-Ispisa.jpg)
+
 Omogućen je i ispis platne liste.
