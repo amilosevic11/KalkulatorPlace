@@ -1,5 +1,5 @@
 # KalkulatorPlace
-Windows Form aplikacija za obračun plaće, pisana u C# programskom jeziku.
+Windows Form aplikacija za obračun plaće pisana u C# programskom jeziku i spojena na lokalnu bazu podataka.
 
 
 Početni prozor nam prikazuje mogućnost odabira hoćemo li unositi novog radnika ili ćemo raditi obračun plaće postojećem radniku.
