@@ -9,3 +9,9 @@ Početni prozor nam prikazuje mogućnost odabira hoćemo li unositi novog radnik
 Pritiskom na "Novi radnik" nam se otvara sljedeći prozor:
 
 ![NoviRadnik](https://i.ibb.co/cN6rGCh/Novi-Radnik-Prozor.jpg)
+
+"Nazad" nas vraća na početni zaslon i ako kliknemo "Postojeći radnik", otvara nam se sljedeći prozor:
+
+![PostojeciRadnik](https://i.ibb.co/6P1hjqM/Prikazi-Sve.jpg)
+
+Računanje obračuna plaće se radi tako da unesemo BRUTO iznos plaće, odaberemo radnika u "DataGridView" i pritisnemo "Izračunaj".
