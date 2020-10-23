@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Radnik">
+          <Key>
+            <PropertyRef Name="OIB" />
+          </Key>
+          <Property Name="OIB" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="Ime" Type="nvarchar" MaxLength="20" />
+          <Property Name="Prezime" Type="nvarchar" MaxLength="20" />
+          <Property Name="Postanski broj i grad" Type="nvarchar" MaxLength="30" />
+          <Property Name="Adresa prebivalista" Type="nvarchar" MaxLength="30" />
+          <Property Name="Broj djece" Type="int" />
+          <Property Name="Bankovni racun" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="LMSModelStoreContainer">
+          <EntitySet Name="Radnik" EntityType="Self.Radnik" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Radnik">
+          <Key>
+            <PropertyRef Name="OIB" />
+          </Key>
+          <Property Name="OIB" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Prezime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Postanski_broj_i_grad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Adresa_prebivalista" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Broj_djece" Type="Int32" />
+          <Property Name="Bankovni_racun" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="LMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Radniks" EntityType="Self.Radnik" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LMSModelStoreContainer" CdmEntityContainer="LMSEntities">
+          <EntitySetMapping Name="Radniks">
+            <EntityTypeMapping TypeName="LMSModel.Radnik">
+              <MappingFragment StoreEntitySet="Radnik">
+                <ScalarProperty Name="OIB" ColumnName="OIB" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Postanski_broj_i_grad" ColumnName="Postanski broj i grad" />
+                <ScalarProperty Name="Adresa_prebivalista" ColumnName="Adresa prebivalista" />
+                <ScalarProperty Name="Broj_djece" ColumnName="Broj djece" />
+                <ScalarProperty Name="Bankovni_racun" ColumnName="Bankovni racun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
